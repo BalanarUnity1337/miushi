@@ -1,0 +1,335 @@
+.features {
+
+  &__inner {
+    @include container();
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  &__header {
+    margin-bottom: 52px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__items {
+    @include ul-reset();
+  }
+
+  &__item {
+    width: 225px;
+    padding-top: 104px;
+    margin: 0 auto 60px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &-img {
+
+      img {
+
+      }
+    }
+
+    &-description {
+      @include paragraph-reset();
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: $color-text;
+    }
+
+    &--kitchen {
+      background-image: url("../img/icons/kitchen.png");
+      background-size: 68px 64px;
+      background-repeat: no-repeat;
+      background-position: 50% 11px;
+    }
+
+    &--dish {
+      background-image: url("../img/icons/dish.png");
+      background-size: 77px 62px;
+      background-repeat: no-repeat;
+      background-position: 50% 12px;
+    }
+
+    &--money {
+      background-image: url("../img/icons/money.png");
+      background-size: 75px 60px;
+      background-repeat: no-repeat;
+      background-position: 50% 16px;
+    }
+
+    &--like {
+      background-image: url("../img/icons/like.png");
+      background-size: 61px 64px;
+      background-repeat: no-repeat;
+      background-position: 50% 8px;
+    }
+
+    &--fish {
+      background-image: url("../img/icons/fish.png");
+      background-size: 85px 57px;
+      background-repeat: no-repeat;
+      background-position: 50% 19px;
+    }
+
+    &--rice {
+      background-image: url("../img/icons/rice.png");
+      background-size: 64px 73px;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+    }
+
+    &--octopus {
+      background-image: url("../img/icons/octopus.png");
+      background-size: 72px 62px;
+      background-repeat: no-repeat;
+      background-position: 50% 10px;
+    }
+
+    &--knife {
+      background-image: url("../img/icons/knife.png");
+      background-size: 92px 66px;
+      background-repeat: no-repeat;
+      background-position: 50% 5px;
+    }
+
+    &--pizza {
+      background-image: url("../img/icons/pizza.png");
+      background-size: 62px 72px;
+      background-repeat: no-repeat;
+      background-position: 50% 2px;
+    }
+
+    &--feather {
+      background-image: url("../img/icons/feather.png");
+      background-size: 63px 68px;
+      background-repeat: no-repeat;
+      background-position: 50% 12px;
+    }
+  }
+
+  &__show-more {
+    display: block;
+    max-width: 292px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+
+    &~ .features__item {
+      display: none;
+    }
+
+    &.active {
+      display: none;
+
+      &~ .features__item {
+        display: block;
+      }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .features {
+
+    &__inner {
+      padding-top: 82px;
+      padding-bottom: 35px;
+    }
+
+    &__header {
+      margin-bottom: 71px;
+
+      &::before,
+      &::after {
+        display: block;
+      }
+
+      &::before {
+        margin-right: 23px;
+      }
+
+      &::after {
+        margin-left: 19px;
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: 35px;
+
+      &:last-of-type {
+        margin-bottom: 35px;
+      }
+
+      &-img {
+
+        img {
+
+        }
+      }
+
+      &-description {
+
+      }
+
+      &--kitchen {
+
+      }
+
+      &--dish {
+
+      }
+
+      &--money {
+
+      }
+
+      &--like {
+
+      }
+
+      &--fish {
+
+      }
+
+      &--rice {
+
+      }
+
+      &--octopus {
+
+      }
+
+      &--knife {
+
+      }
+
+      &--pizza {
+
+      }
+
+      &--feather {
+
+      }
+    }
+
+    &__show-more {
+      display: none;
+
+      &~ .features__item {
+
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .features {
+
+    &__inner {
+      padding-top: 95px;
+      padding-bottom: 60px;
+    }
+
+    &__header {
+
+
+      &::before,
+      &::after {
+
+      }
+
+      &::before {
+        margin-right: 35px;
+      }
+
+      &::after {
+        margin-left: 31px;
+      }
+    }
+
+    &__items {
+
+    }
+
+    &__item {
+
+
+      &:last-of-type {
+
+      }
+
+      &-img {
+
+        img {
+
+        }
+      }
+
+      &-description {
+
+      }
+
+      &--kitchen {
+
+      }
+
+      &--dish {
+
+      }
+
+      &--money {
+
+      }
+
+      &--like {
+
+      }
+
+      &--fish {
+
+      }
+
+      &--rice {
+
+      }
+
+      &--octopus {
+
+      }
+
+      &--knife {
+
+      }
+
+      &--pizza {
+
+      }
+
+      &--feather {
+
+      }
+    }
+
+    &__show-more {
+      display: none;
+
+      &~ .features__item {
+
+      }
+    }
+  }
+}

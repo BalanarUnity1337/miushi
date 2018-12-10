@@ -1,0 +1,115 @@
+.main-menu {
+  @include ul-reset();
+
+  &__item {
+    position: relative;
+    color: $color-font-main;
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+
+      .main-menu__sub {
+        // visibility: visible;
+        // opacity: 1;
+      }
+    }
+
+    &-link {
+      // display: block;
+      // padding: 16px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: inherit;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  &__sub {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+@media #{$desktop-width} {
+  .main-menu {
+    order: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // грязь
+    position: relative;
+    top: 37px;
+    left: -25%;
+
+    &__item {
+      color: $color-font-main;
+      margin-bottom: 0;
+      transition: color 0.3s ease, background-color 0.3s ease;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-green;
+
+        .main-menu__sub {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &--expand {
+
+        &> .main-menu__item-link {
+          position: relative;
+          padding-right: 43px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid $color-font-main;
+            border-bottom: 1px solid $color-font-main;
+            transform: rotateZ(45deg);
+            transition: all 0.3s ease;
+          }
+        }
+
+        &:hover {
+
+          &> .main-menu__item-link {
+
+            &::after {
+              border-color: $color-white;
+            }
+          }
+        }
+      }
+
+      &-link {
+        display: block;
+        padding: 15px 26px;
+      }
+    }
+
+    &__sub {
+      @include ul-reset();
+      top: 100%;
+      left: 0;
+      background-color: $color-white;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+  }
+}

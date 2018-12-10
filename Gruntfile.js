@@ -2,51 +2,50 @@
 
 module.exports = function(grunt) {
   const sass = require('node-sass');
+  const webpackConfig = require('./webpack.config.js');
 
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     sass: {
       options: {
-        implementation: sass
-        // sourceMap: true
+        implementation: sass,
+        sourceMap: false
       },
 
       dist: {
         files: {
-          'src/css/style.css': 'src/sass/style.scss'
+          'dist/css/style.css': 'src/sass/style.scss'
         }
       }
     },
 
     postcss: {
       options: {
-        map: {
-          inline: true,
-          annotation: 'dist/css/maps/'
-        },
-
-        processors: [require('autoprefixer')({ browsers: 'last 2 versions' })]
+        processors: [require('autoprefixer')]
+      },
+      dist: {
+        src: 'dist/css/style.css'
       }
     },
 
     csso: {
       compress: {
         files: {
-          'dist/css/style.min.css': 'src/css/style.css'
+          'dist/css/style.min.css': 'dist/css/style.css'
         }
       }
     },
 
     watch: {
       files: 'src/sass/**/*.scss',
-      tasks: ['sass']
+      tasks: ['sass', 'postcss']
     },
 
     browserSync: {
       dev: {
         bsFiles: {
-          src: ['src/css/*.css', '*.html']
+          src: ['dist/css/*.css', '*.html', 'dist/main.js']
         },
 
         options: {
@@ -54,9 +53,40 @@ module.exports = function(grunt) {
           server: './'
         }
       }
+    },
+
+    clean: {
+      build: ['dist/']
+    },
+
+    copy: {
+      build: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src',
+            src: ['fonts/**', 'img/**'],
+            dest: 'dist/'
+          }
+        ]
+      }
+    },
+
+    webpack: {
+      options: {
+        stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+      },
+      prod: webpackConfig,
+      dev: Object.assign(
+        {
+          watch: true,
+          mode: 'development'
+        },
+        webpackConfig
+      )
     }
   });
 
-  grunt.registerTask('build', ['sass', 'postcss', 'csso']);
+  grunt.registerTask('build', ['clean', 'copy', 'sass', 'postcss', 'csso']);
   grunt.registerTask('serve', ['browserSync', 'watch']);
 };

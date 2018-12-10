@@ -1,0 +1,482 @@
+.products {
+  padding-bottom: 48px;
+
+  &__inner {
+
+  }
+
+  &__header {
+
+  }
+
+  &__items {
+    position: relative;
+    // width: 100%;
+    width: 287px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    transform: translate3d(0px, 0, 0);
+  }
+
+  &__tabs {
+    @include container();
+    padding-bottom: 37px;
+  }
+
+  &__tab {
+    margin-right: 67px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-products-tab;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &.active {
+      color: $color-orange;
+    }
+  }
+
+  &--sets {
+
+    .products__header {
+
+      &::before {
+        margin-right: 20px;
+      }
+
+      &::after {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &--rolls {
+
+    .products__header {
+
+      &::before {
+        margin-right: 15px;
+      }
+
+      &::after {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &--pizzas {
+
+    .products__header {
+
+      &::before {
+        margin-right: 18px;
+      }
+
+      &::after {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &--woks {
+
+    .products__header {
+
+      &::before {
+        margin-right: 25px;
+      }
+
+      &::after {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &--specials {
+    padding-bottom: 0;
+    background-image: url('../img/specials.jpg');
+    background-repeat: repeat;
+
+    .products__inner {
+      padding-top: 45px;
+      padding-bottom: 56px;
+    }
+
+    .products__slider-inner {
+      // padding-bottom: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &-inner {
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      /* Fix of Webkit flickering */
+      z-index: 1;
+      padding-top: 20px;
+      padding-bottom: 26px;
+    }
+
+    &__notification {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      opacity: 0;
+      z-index: -1000;
+    }
+
+    &-pagination {
+      display: none;
+    }
+
+    &-button {
+      display: none;
+
+      &--prev {
+
+      }
+
+      &--next {
+
+      }
+    }
+
+    &--pin {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 0.7s ease;
+
+      &.active {
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .products {
+    padding-bottom: 95px;
+
+    &__inner {
+
+    }
+
+    &__header {
+
+    }
+
+    &__items {
+      width: 720px;
+    }
+
+    &__tabs {
+      padding-bottom: 47px;
+    }
+
+    &__tab {
+
+    }
+
+    &--sets {
+
+      .products__header {
+
+        &::before {
+          margin-right: 30px;
+        }
+
+        &::after {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    &--rolls {
+
+      .products__header {
+
+        &::before {
+          margin-right: 22px;
+        }
+
+        &::after {
+          margin-left: 22px;
+        }
+      }
+    }
+
+    &--pizzas {
+
+      .products__header {
+
+        &::before {
+          margin-right: 27px;
+        }
+
+        &::after {
+          margin-left: 27px;
+        }
+      }
+    }
+
+    &--woks {
+
+      .products__header {
+
+        &::before {
+          margin-right: 33px;
+        }
+
+        &::after {
+          margin-left: 33px;
+        }
+      }
+    }
+
+    &--specials {
+      padding-bottom: 0;
+
+      .products__inner {
+        padding-top: 65px;
+        padding-bottom: 104px;
+      }
+
+      .products__slider-inner {
+        // padding-bottom: 0;
+      }
+    }
+
+    &__slider {
+
+      &-inner {
+        width: 720px;
+      }
+
+      &-pagination {
+        display: block;
+        position: absolute;
+        text-align: center;
+        transition: 300ms opacity;
+        transform: translate3d(0, 0, 0);
+        z-index: 10;
+
+        &--bullets {
+          bottom: -30px;
+          left: 0;
+          width: 100%;
+        }
+
+        &--clickable {
+
+          .slider__pagination-bullet {
+            cursor: pointer;
+          }
+        }
+
+        &-bullet {
+          display: inline-block;
+          vertical-align: bottom;
+          width: 8px;
+          height: 8px;
+          margin-right: 22px;
+          border-radius: 50%;
+          background-color: $color-products-pagination;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &--active {
+            background-color: $color-products-pagination-active;
+          }
+        }
+      }
+
+      &-button {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        bottom: -36px;
+        width: 27px;
+        height: 20px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        background-image: url("../img/right-arrow.png");
+        cursor: pointer;
+
+        &--prev {
+          left: 32.4%;
+          transform: rotateY(180deg);
+        }
+
+        &--next {
+          right: 32.4%;
+        }
+
+        &--disabled {
+          opacity: 0.5;
+          cursor: auto;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .products {
+
+
+    &__inner {
+
+    }
+
+    &__header {
+
+    }
+
+    &__items {
+      width: 1140px;
+    }
+
+    &__tabs {
+
+    }
+
+    &__tab {
+
+    }
+
+    &--sets {
+
+      .products__header {
+
+        &::before {
+          margin-right: 38px;
+        }
+
+        &::after {
+          margin-left: 38px;
+        }
+      }
+    }
+
+    &--rolls {
+
+      .products__header {
+
+        &::before {
+          margin-right: 34px;
+        }
+
+        &::after {
+          margin-left: 34px;
+        }
+      }
+    }
+
+    &--pizzas {
+
+      .products__header {
+
+        &::before {
+          margin-right: 25px;
+        }
+
+        &::after {
+          margin-left: 25px;
+        }
+      }
+    }
+
+    &--woks {
+
+      .products__header {
+
+        &::before {
+          margin-right: 27px;
+        }
+
+        &::after {
+          margin-left: 27px;
+        }
+      }
+    }
+
+    &--specials {
+
+
+      .products__inner {
+
+      }
+
+      .products__slider-inner {
+        // padding-bottom: 0;
+      }
+    }
+
+    &__slider {
+
+      &-inner {
+        width: 1140px;
+      }
+
+      &-pagination {
+
+
+        &--bullets {
+
+        }
+
+        &--clickable {
+
+          .slider__pagination-bullet {
+
+          }
+        }
+
+        &-bullet {
+
+
+          &:last-of-type {
+
+          }
+
+          &--active {
+
+          }
+        }
+      }
+
+      &-button {
+
+
+        &--prev {
+          left: 38.4%;
+        }
+
+        &--next {
+          right: 38.4%;
+        }
+
+        &--disabled {
+
+        }
+      }
+    }
+  }
+}

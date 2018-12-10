@@ -112,6 +112,24 @@
       background-repeat: no-repeat;
       background-position: 50% 12px;
     }
+
+    &--show-more {
+      width: auto;
+      margin: 0;
+      padding-top: 0;
+
+      &~ .features__item {
+        display: none;
+      }
+
+      &.active {
+        display: none;
+
+        &~ .features__item {
+          display: block;
+        }
+      }
+    }
   }
 
   &__show-more {
@@ -121,18 +139,6 @@
     margin-left: auto;
     margin-right: auto;
     font-weight: 600;
-
-    &~ .features__item {
-      display: none;
-    }
-
-    &.active {
-      display: none;
-
-      &~ .features__item {
-        display: block;
-      }
-    }
   }
 }
 

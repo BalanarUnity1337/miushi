@@ -1973,6 +1973,16 @@ template {
     background-size: 63px 68px;
     background-repeat: no-repeat;
     background-position: 50% 12px; }
+  .features__item--show-more {
+    width: auto;
+    margin: 0;
+    padding-top: 0; }
+    .features__item--show-more ~ .features__item {
+      display: none; }
+    .features__item--show-more.active {
+      display: none; }
+      .features__item--show-more.active ~ .features__item {
+        display: block; }
 
 .features__show-more {
   display: block;
@@ -1981,12 +1991,6 @@ template {
   margin-left: auto;
   margin-right: auto;
   font-weight: 600; }
-  .features__show-more ~ .features__item {
-    display: none; }
-  .features__show-more.active {
-    display: none; }
-    .features__show-more.active ~ .features__item {
-      display: block; }
 
 @media (min-width: 750px) {
   .features__inner {

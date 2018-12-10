@@ -1,0 +1,84 @@
+.user-menu {
+  @include ul-reset();
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  &__item {
+
+    &-link {
+      position: relative;
+      display: block;
+      width: 22px;
+      height: 22px;
+      font-size: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background-image: url("../img/sprite.png");
+        background-repeat: no-repeat;
+      }
+
+      &--account {
+
+        &::before {
+          background-position: -81px -5px;
+        }
+      }
+
+      &--cart {
+
+        &::before {
+          background-position: -5px -5px;
+        }
+      }
+    }
+
+    &:nth-last-child(n + 2) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .user-menu {
+    order: 3;
+    margin-left: auto;
+
+    &__item {
+
+      &-link {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 14px 26px 14px 36px;
+        font-size: 14px;
+        font-weight: 600;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &::before {
+          top: 14px;
+        }
+
+        &--account {
+
+        }
+
+        &--cart {
+
+        }
+      }
+
+      &:nth-last-child(n + 2) {
+
+      }
+    }
+  }
+}

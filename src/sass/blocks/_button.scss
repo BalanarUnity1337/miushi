@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 14px;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &--orange {
+    color: $color-white;
+    border: 1px solid $color-orange;
+    background-color: $color-orange;
+
+    &.button--invert {
+      color: $color-orange;
+      // border: 1px solid $color-orange;
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    border: 1px solid $color-button-green;
+
+    &.button--invert {
+      color: $color-button-green;
+      background-color: $color-white;
+    }
+  }
+}

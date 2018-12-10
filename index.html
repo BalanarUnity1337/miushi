@@ -6,32 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Миюши</title>
-  <link rel="src/css/style.css" rel="stylesheet">
+  <link href="dist/css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-wrapper">
   <header class="page-header">
     <div class="page-header__inner">
-      <div class="page-header__contacts">
-        <a class="logo" href="#">
-          <img src="" alt="">
-        </a>
+      <div class="page-header__side-menu  js-side-menu">
+        <button class="page-header__side-menu-close  js-side-menu-close" type="button">Закрыть</button>
 
-        <p class="page-header__contact  page-header__contact--address">г. Курск, ул. Ленина, д. 3</p>
-        <p class="page-header__contact  page-header__contact--email">78003332222@yandex.ru</p>
-        <p class="page-header__contact  page-header__contact--phone">
-          +7 (800) 333 2 222<br>
-          <span class="page-header__work-time">Работаем с 11.00 до 23.00</span>
-        </p>
-
-        <a class="button" href="#">Обратный звонок</a>
-      </div>
-
-      <nav class="page-header__nav">
-        <!-- <button class="burger" -->
         <ul class="main-menu">
-          <li class="main-menu__item">
+          <li class="main-menu__item  main-menu__item--expand">
             <a class="main-menu__item-link" href="#">Меню</a>
+
+            <ul class="main-menu__sub">
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Суши</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Гунканы</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Инари</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Супы</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Салаты</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Горячие закуски</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Десерты</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Напитки</a>
+              </li>
+
+              <li class="main-menu__item">
+                <a class="main-menu__item-link" href="#">Дополнительно</a>
+              </li>
+            </ul>
           </li>
 
           <li class="main-menu__item">
@@ -51,164 +75,1236 @@
           </li>
         </ul>
 
-        <a class="logo" href="#">
-          <img src="" alt="">
-        </a>
+        <div class="page-header__contacts">
+          <p class="page-header__contact  page-header__contact--phone">
+            +7 (800) 333 2 222<br>
+            <span class="page-header__work-time">Работаем с 11.00 до 23.00</span>
+          </p>
 
-        <ul class="user-menu">
-          <li class="user-menu__item">
-            <a class="user-menu__item-link  user-menu__item-link--account" href="#">Кабинет</a>
-          </li>
+          <a class="button  page-header__feedback  button--green  button--invert" href="#">Обратный звонок</a>
 
-          <li class="user-menu__item">
-            <a class="user-menu__item-link  user-menu__item-link--cart" href="#">Корзина</a>
-          </li>
-        </ul>
-      </nav>
+          <p class="page-header__contact  page-header__contact--address">г. Курск, ул. Ленина, д. 3</p>
+
+          <a class="page-header__contact  page-header__contact--email" href="mailto:78003332222@yandex.ru">78003332222@yandex.ru</a>
+        </div>
+      </div>
+
+      <button class="hamburger  hamburger--slider  js-hamburger" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <a class="page-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 750px)" srcset="src/img/logo-desktop.png">
+          <img src="src/img/logo-mobile.png" alt="" width="46" height="46">
+        </picture>
+      </a>
+
+      <ul class="user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__item-link  user-menu__item-link--account" href="#" title="Кабинет">Кабинет</a>
+        </li>
+
+        <li class="user-menu__item">
+          <a class="user-menu__item-link  user-menu__item-link--cart" href="#" title="Корзина">Корзина</a>
+        </li>
+      </ul>
     </div>
   </header>
 
   <main class="page-content">
     <!-- Slider -->
-    <!-- Упрощенная разметка, т.к. возможно будет библиотека -->
     <div class="slider">
-      <div class="slider__item">
-        <h4 class="slider__item-title">Счастливые часы</h4>
+      <div class="slider__inner">
+        <div class="slider__slides">
+          <div class="slider__slide" style="background-image: url('src/img/slides/slide-1.jpg');">
+            <div class="slider__slide-badge">скидка 15%</div>
 
-        <p class="slider__item-text">с 11:00 до 16:00 в будние дни</p>
+            <h4 class="slider__slide-title">Счастливые часы</h4>
 
-        <button class="button" type="button">Подробнее</button>
+            <p class="slider__slide-text">с 11:00 до 16:00 в будние дни</p>
+
+            <a class="button  button--orange  slider__slide-more-info" href="#">Подробнее</a>
+          </div>
+
+          <div class="slider__slide" style="background-image: url('src/img/slides/slide-1.jpg');">
+            <h4 class="slider__slide-title">Счастливые часы</h4>
+
+            <p class="slider__slide-text">с 11:00 до 16:00 в будние дни</p>
+
+            <a class="button  button--orange  slider__slide-more-info" href="#">Подробнее</a>
+          </div>
+
+          <div class="slider__slide" style="background-image: url('src/img/slides/slide-1.jpg');">
+            <h4 class="slider__slide-title">Счастливые часы</h4>
+
+            <p class="slider__slide-text">с 11:00 до 16:00 в будние дни</p>
+
+            <a class="button  button--orange  slider__slide-more-info" href="#">Подробнее</a>
+          </div>
+        </div>
       </div>
+
+      <div class="slider__pagination"></div>
+      <button class="slider__button  slider__button--prev"></button>
+      <button class="slider__button  slider__button--next"></button>
     </div>
 
     <!-- Сеты -->
-    <section class="products">
+    <section class="products  products--sets">
       <div class="products__inner">
-        <h2 class="products__header">Сеты</h2>
+        <h2 class="products__header  section-header">Сеты</h2>
 
-        <div class="products__items">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+        <div class="products__slider">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product  product--full-covered  product--hit" data-price='{ "price": 2050 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/1.jpg" alt="" width="227" height="214">
+                  </div>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №10</h3>
+                    <p class="product__description">72 шт. | 1560 г. | 1700 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">2&nbsp;050</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
                   </div>
                 </div>
+              </div>
 
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
+              <div class="product  product--full-covered" data-price='{ "price": 1550 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №8</h3>
+                    <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">1&nbsp;550</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 510 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Минисет №5</h3>
+                    <p class="product__description">14 шт. | 450 г. | 400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">510</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--veg  product--full-covered" data-price='{ "price": 400 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №6</h3>
+                    <p class="product__description">16 шт. | 460 г. | 490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">400</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered  product--hit" data-price='{ "price": 2050 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/1.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №10</h3>
+                    <p class="product__description">72 шт. | 1560 г. | 1700 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">2&nbsp;050</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 1550 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №8</h3>
+                    <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">1&nbsp;550</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 510 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Минисет №5</h3>
+                    <p class="product__description">14 шт. | 450 г. | 400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">510</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--veg  product--full-covered" data-price='{ "price": 400 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №6</h3>
+                    <p class="product__description">16 шт. | 460 г. | 490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">400</span>
+                        <span class="product__price-currency">руб.</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button" title="Убрать">Убрать</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button" title="Добавить">Добавить</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
       </div>
     </section>
 
     <!-- Роллы -->
-    <section class="products">
+    <section class="products  products--rolls">
       <div class="products__inner">
-        <h2 class="products__header">Роллы</h2>
+        <h2 class="products__header  section-header">Роллы</h2>
 
-        <div class="products__items">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+        <div class="products__slider">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product" data-price='{ "price": 260 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/1.jpg" alt="" width="227" height="214">
+                  </div>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+                  <div class="product__content">
+                    <h3 class="product__title">Кунсей батакон</h3>
+                    <p class="product__description">8 шт. | 250 г. | 350 Kkal</p>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">260</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
                   </div>
                 </div>
+              </div>
 
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
+              <div class="product  product--hot" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Унаги диру</h3>
+                    <p class="product__description">8 шт. | 960 г. | 800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Филадельфия</h3>
+                    <p class="product__description">8 шт. | 450 г. | 400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Мексиканский</h3>
+                    <p class="product__description">8 шт. | 460 г. | 490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 260 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/1.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Кунсей батакон</h3>
+                    <p class="product__description">8 шт. | 250 г. | 350 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">260</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--hot" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Унаги диру</h3>
+                    <p class="product__description">8 шт. | 960 г. | 800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Филадельфия</h3>
+                    <p class="product__description">8 шт. | 450 г. | 400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Мексиканский</h3>
+                    <p class="product__description">8 шт. | 460 г. | 490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
       </div>
     </section>
 
     <!-- Пицца -->
-    <section class="products">
+    <section class="products  products--pizzas">
       <div class="products__inner">
-        <h2 class="products__header">Пицца</h2>
+        <h2 class="products__header  section-header">Пицца</h2>
 
-        <div class="products__items">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+        <div class="products__slider">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product  product--full-covered" data-price='{ "price": 480 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/1.jpg" alt="" width="227" height="214">
+                  </div>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+                  <div class="product__content">
+                    <h3 class="product__title">Баварская</h3>
+                    <p class="product__description">33 см | 680 г. | 1350 Kkal</p>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">480</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
                   </div>
                 </div>
+              </div>
 
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
+              <div class="product  product--full-covered  product--hot" data-price='{ "price": 380 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Вегетарианская</h3>
+                    <p class="product__description">33 см | 755 г. | 1800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">380</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 450 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Пепперони</h3>
+                    <p class="product__description">33 см | 615 г. | 1400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">450</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 390 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Классическая</h3>
+                    <p class="product__description">33 см | 590 г. | 1490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">390</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 480 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/1.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Баварская</h3>
+                    <p class="product__description">33 см | 680 г. | 1350 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">480</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered  product--hot" data-price='{ "price": 380 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Вегетарианская</h3>
+                    <p class="product__description">33 см | 755 г. | 1800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">380</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 450 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Пепперони</h3>
+                    <p class="product__description">33 см | 615 г. | 1400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">450</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--full-covered" data-price='{ "price": 390 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/pizzas/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Классическая</h3>
+                    <p class="product__description">33 см | 590 г. | 1490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">390</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
       </div>
     </section>
 
     <!-- WOK -->
-    <section class="products">
+    <section class="products  products--woks">
       <div class="products__inner">
-        <h2 class="products__header">WOK</h2>
+        <h2 class="products__header  section-header">WOK</h2>
 
-        <div class="products__items">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+        <div class="products__slider">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/1.jpg" alt="" width="227" height="214">
+                  </div>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+                  <div class="product__content">
+                    <h3 class="product__title">С говядиной</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
                   </div>
                 </div>
+              </div>
 
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С курицей</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С&nbsp;морепродуктами</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С овощами</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/1.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С говядиной</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С курицей</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С&nbsp;морепродуктами</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product" data-price='{ "price": 290, "additives": { "chinese": 70, "cheese": 60 } }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/woks/4.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">С овощами</h3>
+                    <p class="product__description">400 г. | 1350 Kkal</p>
+
+                    <div class="product__additives">
+                      <div class="product__additives-controls">
+                        Добавить:
+                        <div class="product__additives-count">
+                          +<span class="product__additives-count-value">0</span>
+                          <button class="product__additives-remove" type="button" title="Удалить"></button>
+                        </div>
+
+                        <span class="product__additives-cost">
+                          <span class="product__additives-cost-value">0</span>
+                          <span class="product__additives-currency">руб.</span>
+                        </span>
+
+                        <button class="product__additives-add" type="button"></button>
+                      </div>
+
+                      <div class="product__additives-select">
+                        <select name="additives">
+                          <option value="chinese">Китайский соус</option>
+                          <option value="cheese">Сырный соус</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  product__add-to-cart  button--orange" href="#">В корзину</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
       </div>
     </section>
@@ -217,60 +1313,168 @@
     <section class="products  products--specials">
       <div class="products__inner">
         <nav class="products__tabs">
-          <a class="products__tab  active" href="#">Новинки</a>
-          <a class="products__tab" href="#">Акции</a>
-        </nav>>
+          <a class="products__tab  active  js-tab" href="#new">Новинки</a>
+          <a class="products__tab  js-tab" href="#specials">Акции</a>
+        </nav>
 
-        <div class="products__items  js-tab-new">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+        <div id="new" class="products__slider  products__slider--pin  products__slider--show  active">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product  product--new" data-price='{ "price": 260 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/1.jpg" alt="" width="227" height="214">
+                  </div>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+                  <div class="product__content">
+                    <h3 class="product__title">Кунсей батакон</h3>
+                    <p class="product__description">8 шт. | 250 г. | 350 Kkal</p>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">260</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
                   </div>
                 </div>
+              </div>
 
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
+              <div class="product  product--hot  product--new" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/2.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Унаги диру</h3>
+                    <p class="product__description">8 шт. | 960 г. | 800 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--new" data-price='{ "price": 280 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Филадельфия</h3>
+                    <p class="product__description">8 шт. | 450 г. | 400 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">280</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product  product--new" data-price='{ "price": 290 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/rolls/3.jpg" alt="" width="227" height="214">
+                  </div>
+
+                  <div class="product__content">
+                    <h3 class="product__title">Мексиканский</h3>
+                    <p class="product__description">8 шт. | 460 г. | 490 Kkal</p>
+
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">290</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
 
-        <div class="products__items  js-tab-action">
-          <div class="product">
-            <div class="product__inner">
-              <div class="product__img"><img src="" alt=""></div>
-              <div class="product__content">
-                <h3 class="product__title">Сет №8</h3>
-                <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
+        <div id="specials" class="products__slider  products__slider--pin">
+          <div class="products__slider-inner">
+            <div class="products__items">
+              <div class="product  product--full-covered" data-price='{ "price": 1550 }'>
+                <div class="product__inner">
+                  <div class="product__img">
+                    <img src="src/img/sets/2.jpg" alt="" width="227" height="214">
+                  </div>
 
-                <div class="product__price-row">
-                  <span class="product__price">1550
-                    <span class="product__price-currency">руб</span>
-                  </span>
+                  <div class="product__content">
+                    <h3 class="product__title">Сет №8</h3>
+                    <p class="product__description">24 шт. | 960 г. | 800 Kkal</p>
 
-                  <div class="product__controls">
-                    <button class="product__controls-sub" type="button">-</button>
-                    <input type="text" class="product__controls-count">
-                    <button class="product__controls-add" type="button">+</button>
+                    <div class="product__price-row">
+                      <span class="product__price">
+                        <span class="product__price-value">1&nbsp;550</span>
+                        <span class="product__price-currency">руб</span>
+                      </span>
+
+                      <div class="product__controls">
+                        <button class="product__controls-sub" type="button">-</button>
+                        <input type="text" class="product__controls-count" value="1">
+                        <button class="product__controls-add" type="button">+</button>
+                      </div>
+                    </div>
+
+                    <a class="button  button--orange  product__add-to-cart" href="#">В корзину</a>
                   </div>
                 </div>
-
-                <button class="button  product__add-to-cart" type="button">В корзину</button>
               </div>
             </div>
           </div>
+
+          <div class="products__slider-pagination"></div>
+          <button class="products__slider-button  products__slider-button--prev"></button>
+          <button class="products__slider-button  products__slider-button--next"></button>
         </div>
       </div>
     </section>
@@ -278,57 +1482,51 @@
     <!-- Достоинства, преимущества, etc -->
     <section class="features">
       <div class="features__inner">
-        <div class="features__title">10 причин купить у нас</div>
+        <h4 class="features__header  section-header">10 причин купить у нас</h4>
+
         <ul class="features__items">
           <li class="features__item  features__item--kitchen">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">100% ручная работа</p>
           </li>
 
           <li class="features__item  features__item--dish">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">100% свежие ингредиенты</p>
           </li>
 
           <li class="features__item  features__item--money">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Самые низкие цены на рынке! (Нет ресторанной наценки)</p>
           </li>
 
-          <button class="button  features__show-more" type="button">Показать все</button>
+          <li class="features__item  features__item--show-more">
+            <button class="button  button--orange  button--invert  features__show-more  js-show-more" type="button">Показать
+              все</button>
+          </li>
 
           <li class="features__item  features__item--like">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Постоянный контроль качества на всех этапах</p>
           </li>
 
           <li class="features__item  features__item--fish">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Только охлажденная рыба (никакой заморозки)</p>
           </li>
 
           <li class="features__item  features__item--rice">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Мы используем только дорогой рис из Японии</p>
           </li>
 
           <li class="features__item  features__item--octopus">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Больше начинки, меньше риса!</p>
           </li>
 
           <li class="features__item  features__item--knife">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Мы не заменяем авокадо огурцом!</p>
           </li>
 
           <li class="features__item  features__item--pizza">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Вся пицца готовится из итальянской муки и Итальянского соуса</p>
           </li>
 
           <li class="features__item  features__item--feather">
-            <div class="features__item-img"><img src="" alt=""></div>
             <p class="features__item-description">Мы не используем майонез!</p>
           </li>
         </ul>
@@ -337,23 +1535,34 @@
 
     <!-- Отзывы -->
     <section class="reviews">
-      <!-- Фигня из VK -->
+      <div class="reviews__inner">
+        <h3 class="reviews__header  section-header">Отзывы</h3>
+
+        <div class="reviews__items">
+          <div id="vk_post_-30809645_88089" class="reviews__item"></div>
+
+          <div id="vk_post_-30809645_88092" class="reviews__item"></div>
+
+          <div id="vk_post_-30809645_88085" class="reviews__item"></div>
+        </div>
+      </div>
     </section>
 
     <!-- Feedback -->
     <section class="feedback">
       <div class="feedback__inner">
-        <span class="feedback__title-notice">Есть вопросы?</span>
+        <span class="feedback__header-notice">Есть вопросы?</span>
 
-        <h3 class="feedback__title">Оставьте свои контакты</h3>
+        <h3 class="feedback__header  section-header">Оставьте свои контакты</h3>
 
-        <form class="feedback__form" action="" method="POST">
+        <form class="feedback__form" method="POST">
           <input class="feedback__form-input" type="text" name="name" placeholder="Имя">
           <input class="feedback__form-input" type="tel" name="phone" placeholder="Телефон">
-          <button class="button" type="submit">Отправить</button>
+          <button class="button  button--orange  feedback__button" type="submit">Отправить</button>
         </form>
 
-        <p class="feedback__attention">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных
+        <p class="feedback__attention">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих
+          персональных
           данных.</p>
       </div>
     </section>
@@ -361,51 +1570,70 @@
     <!-- О компании -->
     <section class="about">
       <div class="about__inner">
-        <h3 class="about__title">О компании</h3>
+        <h3 class="about__header  section-header">О компании</h3>
 
         <p class="about__description-theme">Заказ и доставка роллов, пиццы и WOK(Вок) в городе Курск</p>
 
         <div class="about__description-content">
-          <p class="about__description-text">
-            Суши МИЮШИ открылись в октябре 2012г. и уже завоевали успех у тех, кто ценит японскую кухню и качественное
-            приготовление блюд.
+          <div class="about__description-text">
+            <div class="about__description-img">
+              <img src="src/img/about.jpg" alt="" width="220" height="478">
+            </div>
 
-            С 2013 года мы осуществляем не только доставку на дом, теперь для вас открыт наш уютный небольшой зал.
-            Придя
-            сюда, вы сможете плотно пообедать, насладиться прекрасными напитками, посидеть с друзьями или обзавестись
-            новыми знакомствами.
+            <p>
+              Суши МИЮШИ открылись в октябре 2012г. и уже завоевали успех у тех, кто ценит японскую кухню и
+              качественное приготовление блюд.
+            </p>
 
-            Открывая зал, Мы преследовали цель предоставить своим посетителям максимум удобства и комфорта, поэтому,
-            придя сюда в первый раз, вы почувствуете себя как рыба в воде, окунувшись в домашнюю и теплую обстановку!
+            <p>
+              С 2013 года мы осуществляем не только доставку на дом, теперь для вас открыт наш уютный небольшой зал.
+              Придя сюда, вы сможете плотно пообедать, насладиться прекрасными напитками, посидеть с друзьями или
+              обзавестись новыми знакомствами.
+            </p>
 
-            Особое внимание мы уделяем организации доставки суши и других блюд, которая осуществляется только по г.
-            Курске. Четкая и слаженная работа курьеров позволяет максимально сократить время от приготовления блюда до
-            его попадания на стол заказчику. Как правило, оно составляет от 20 до 60 минут в зависимости от
-            местонахождения клиента. Операторы службы доставки всегда осведомлены обо всех изменениях времени доставки
-            и
-            предупреждают клиентов заранее, а при возможных серьезных задержках в связи с дорожной ситуацией предложат
-            Вам альтернативу. Мы беремся только за ту работу, которую можем выполнить в срок.
+            <p>
+              Открывая зал, Мы преследовали цель предоставить своим посетителям максимум удобства и комфорта,
+              поэтому,
+              придя сюда в первый раз, вы почувствуете себя как рыба в воде, окунувшись в домашнюю и теплую
+              обстановку!
+            </p>
 
-            В меню суши МИЮШИ представлено все многообразие японской кухни. Классические суши, и роллы приготовлены в
-            соответствии с традиционными рецептами. Для любителей нежных и тающих во рту блюд предлагаются роллы с
-            мясом
-            краба, а также для больших любителей копченого угря потрясающий ролл Дракон. Для желающих пробовать что-то
-            новое и необычное – острые ГУНКАНЫ и новинка нашего меню - ИНАРИ, широкий выбор горячих роллов. Большим
-            компаниям будет удобно заказать суши и роллы, объединенные в сеты, включающие сразу несколько видов каждого
-            из этих блюд. Кроме того, меню суши МИЮШИ не ограничено только японской кухней, здесь всегда можно заказать
-            горячие и холодные блюда ЛАПША или РИС WOK с различными мясными и рыбными наполнителями, салаты, горячие
-            закуски и различные напитки.
+            <button class="button  button--orange  button--invert  about__button  js-show-more" type="button">Показать
+              еще</button>
 
-            Оформив у нас заказ суши на дом, клиент может выбрать удобный ему способ оплаты: наличными при получении
-            заказа или банковской картой VISA, MasterCard при заполнении специальной формы заказа на сайте или на дому
-            через переносной терминал (заранее сообщив оператору о форме оплаты).
+            <p>
+              Особое внимание мы уделяем организации доставки суши и других блюд, которая осуществляется только по г.
+              Курске. Четкая и слаженная работа курьеров позволяет максимально сократить время от приготовления блюда
+              до его попадания на стол заказчику. Как правило, оно составляет от 20 до 60 минут в зависимости от
+              местонахождения клиента. Операторы службы доставки всегда осведомлены обо всех изменениях времени
+              доставки и предупреждают клиентов заранее, а при возможных серьезных задержках в связи с дорожной
+              ситуацией предложат Вам альтернативу. Мы беремся только за ту работу, которую можем выполнить в срок.
+            </p>
 
-            Информацию по стоимости доставки и минимальной суммы заказа в отдаленные районы г. Мытищ можно уточнить у
-            оператора по телефону.
-          </p>
+            <p>В меню суши МИЮШИ представлено все многообразие японской кухни. Классические суши, и роллы
+              приготовлены
+              в соответствии с традиционными рецептами. Для любителей нежных и тающих во рту блюд предлагаются роллы
+              с
+              мясом краба, а также для больших любителей копченого угря потрясающий ролл Дракон. Для желающих
+              пробовать
+              что-то новое и необычное – острые ГУНКАНЫ и новинка нашего меню - ИНАРИ, широкий выбор горячих роллов.
+              Большим компаниям будет удобно заказать суши и роллы, объединенные в сеты, включающие сразу несколько
+              видов каждого из этих блюд. Кроме того, меню суши МИЮШИ не ограничено только японской кухней, здесь
+              всегда можно заказать горячие и холодные блюда ЛАПША или РИС WOK с различными мясными и рыбными
+              наполнителями, салаты, горячие закуски и различные напитки.</p>
 
-          <div class="about__description-img">
-            <img src="" alt="">
+            <p>
+              Оформив у нас заказ суши на дом, клиент может выбрать удобный ему способ оплаты: наличными при
+              получении
+              заказа или банковской картой VISA, MasterCard при заполнении специальной формы заказа на сайте или на
+              дому через переносной терминал (заранее сообщив оператору о форме оплаты).
+            </p>
+
+            <p>
+              Информацию по стоимости доставки и минимальной суммы заказа в отдаленные районы г. Мытищ можно уточнить
+              у
+              оператора по телефону.
+            </p>
           </div>
         </div>
       </div>
@@ -416,6 +1644,8 @@
     <div class="page-footer__inner">
       <div class="page-footer__blocks">
         <div class="page-footer__block">
+          <h3 class="page-footer__block-title">Меню</h3>
+
           <ul class="footer-menu">
             <li class="footer-menu__item">
               <a href="#" class="footer-menu__item-link">Суши</a>
@@ -585,20 +1815,22 @@
 
         <ul class="page-footer__socials">
           <li class="page-footer__social">
+            <a class="page-footer__social-link  page-footer__social-link--fb" href="#" title="Мы в Facebook">Facebook</a>
+          </li>
+
+          <li class="page-footer__social">
             <a class="page-footer__social-link  page-footer__social-link--insta" href="#" title="Мы в Instagram">Инстаграм</a>
           </li>
 
           <li class="page-footer__social">
             <a class="page-footer__social-link  page-footer__social-link--vk" href="#" title="Мы в VK">ВКонтакте</a>
           </li>
-
-          <li class="page-footer__social">
-            <a class="page-footer__social-link  page-footer__social-link--fb" href="#" title="Мы в Facebook">Facebook</a>
-          </li>
         </ul>
       </div>
     </div>
   </footer>
+  <div class="overlay  overlay--hidden"></div>
+  <script src="dist/main.js"></script>
 </body>
 
 </html>

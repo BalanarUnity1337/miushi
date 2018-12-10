@@ -1,0 +1,59 @@
+.footer-menu {
+  @include ul-reset();
+  @include container();
+  padding-top: 22px;
+  padding-bottom: 28px;
+  background-color: $color-footer-block;
+
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &-link {
+      font-size: 14px;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .footer-menu {
+
+
+    &__item {
+
+
+      &:last-of-type {
+
+      }
+
+      &-link {
+
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .footer-menu {
+    max-width: none;
+    padding: 0;
+    background-color: transparent;
+
+    &__item {
+      margin-bottom: 5px;
+
+      &:last-of-type {
+
+      }
+
+      &-link {
+
+      }
+    }
+  }
+}

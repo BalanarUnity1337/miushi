@@ -1,0 +1,225 @@
+.about {
+
+  &__inner {
+    @include container();
+    padding-top: 36px;
+    padding-bottom: 74px;
+  }
+
+  &__header {
+    margin-bottom: 46px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__description {
+
+    &-theme {
+      @include paragraph-reset();
+      margin-bottom: 36px;
+      font-size: 20px;
+      line-height: 1.2em;
+      font-weight: 700;
+      color: $color-dark;
+    }
+
+    &-content {
+
+    }
+
+    &-text {
+      color: $color-text;
+
+      p {
+        @include paragraph-reset();
+        margin-bottom: 25px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-img {
+      display: none;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    max-width: 292px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &~ p {
+      display: none;
+    }
+
+    &.active {
+      display: none;
+
+      &~ p {
+        display: block;
+      }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .about {
+
+    &__inner {
+      padding-top: 70px;
+      padding-bottom: 180px;
+    }
+
+    &__header {
+
+
+      &::before,
+      &::after {
+        display: block;
+      }
+
+      &::before {
+        margin-right: 25px;
+      }
+
+      &::after {
+        margin-left: 34px;
+      }
+    }
+
+    &__description {
+
+      &-theme {
+        font-size: 22px;
+      }
+
+      &-content {
+
+      }
+
+      &-text {
+
+        p {
+
+
+          &:last-of-type {
+
+          }
+        }
+      }
+
+      &-img {
+        display: block;
+        float: right;
+        width: 220px;
+        height: 478px;
+        margin-left: 30px;
+
+        img {
+
+        }
+      }
+    }
+
+    &__button {
+      display: none;
+
+      &~ p {
+
+      }
+    }
+  }
+}
+
+@media #{$desktop-width} {
+  .about {
+
+    &__inner {
+      padding-top: 73px;
+      padding-bottom: 160px;
+    }
+
+    &__header {
+
+
+      &::before,
+      &::after {
+
+      }
+
+      &::before {
+
+      }
+
+      &::after {
+
+      }
+    }
+
+    &__description {
+
+      &-theme {
+        font-size: 24px;
+      }
+
+      &-content {
+
+      }
+
+      &-text {
+        position: relative;
+        padding-right: 320px;
+
+        p {
+
+
+          &:last-of-type {
+
+          }
+        }
+      }
+
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: none;
+        width: 277px;
+        height: 478px;
+        margin-left: 0;
+
+        img {
+
+        }
+      }
+    }
+
+    &__button {
+
+
+      &~ p {
+
+      }
+
+      &.active {
+        &~ p {
+
+        }
+      }
+    }
+  }
+}
